@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
      int fd;
 
      for (i = 1;; ++i) {
-          if ((fd = open("sample.c", O_RDONLY)) < 0)  
+          if ((fd = open(argv[1], O_RDONLY)) < 0)  
                break;
           printf("count = %d, fd = %d\n", i, fd);
      }
